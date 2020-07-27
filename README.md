@@ -49,13 +49,13 @@ A single base in airtable represents a single **website**. Each table within a b
 
 So for example, the following table:
 
-![airtable](/Users/tkarim/github/airgo/assets/airtable-1.png)
+![airtable](assets/airtable-1.png)
 
 
 
 Would be represented as a `template` file and each of the columns (`Title`, `Body`, `Images`) may be injected into a static html file like so:
 
-![example](/Users/tkarim/github/airgo/assets/example-1.png)
+![example](assets/example-1.png)
 
 Notice the `Home` link on the top left. The `config.json` file provides mappings for converting a table to a template. The "human readable" name of the template is defined in this config, like so:
 
