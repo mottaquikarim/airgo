@@ -1,0 +1,7 @@
+{
+	"nav": [{
+		"name": "Home",
+		"key": "Home",
+		"filenameRoot": "index"
+	}],
+}

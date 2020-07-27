@@ -1,0 +1,12 @@
+{{ define "content" }}
+	{{ range . }}
+		<h1>{{ .Fields.Title }}</h1>
+		<p>{{ .Fields.Body }}</p>
+		<img 
+			src="{{ (index .Fields.Images 2).thumbnails.full.url}}"
+			height="{{ (index .Fields.Images 2).thumbnails.full.height}}"
+			width="{{ (index .Fields.Images 2).thumbnails.full.width}}" 
+		/>
+		
+	{{ end }}
+{{ end }}

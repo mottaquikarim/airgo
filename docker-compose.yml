@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  airgo_develop:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '4001:80'
+    volumes:
+      - .:/app
