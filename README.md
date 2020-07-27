@@ -25,16 +25,17 @@ cd airgo
 First, clone the repo to your local environment and cd into the downloaded folder.
 
 ```bash
-make refresh arguments="-api-key=keyXXXXXXXw6 -base-id=appXXXXXXXoo"
-```
-
-Then, run `make refresh` which will look up data from airtable and store it locally in the `data` folder. In order to make this step properly work, you will need to fetch your **API key** and **Base ID** from airtable.
-
-```bash
 make develop
 ```
 
-Finally, running `make develop` will initialize a static file server in go for development purposes. Whenever template files, configs or the logic that converts data into HTML is changed, the server will "live restart" making development much easier / simpler.
+Running `make develop` will initialize a static file server in go for development purposes. Whenever template files, configs or the logic that converts data into HTML is changed, the server will "live restart" making development much easier / simpler.
+
+```bash
+make refresh arguments="-api-key=keyXXXXXXXw6 -base-id=appXXXXXXXoo"
+```
+
+Finally, run `make refresh` which will look up data from airtable and store it locally in the `data` folder. In order to make this step properly work, you will need to fetch your **API key** and **Base ID** from airtable.
+
 
 ## Core Concepts
 

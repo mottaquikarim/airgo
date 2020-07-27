@@ -11,4 +11,4 @@ RUN go build -o build/site_builder cmd/site_builder/main.go
 
 EXPOSE 80
 
-ENTRYPOINT CompileDaemon --build="go build -o build/site_builder cmd/site_builder/main.go" --command=./site_builder --pattern=. --exclude-dir="./static" --exclude-dir="./build"
+ENTRYPOINT CompileDaemon --build="go build -o build/site_builder cmd/site_builder/main.go" --command=./build/site_builder --pattern=. --exclude-dir="./static" --exclude-dir="./build"

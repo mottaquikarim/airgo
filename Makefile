@@ -25,6 +25,12 @@ compose:
 	docker-compose build --no-cache 
 	docker-compose up -d
 
+# 	Spin down project
+#	Usage:
+#		make stop
+stop:
+	docker-compose down
+
 #   Download data from airtable:
 #	Usage:
 #		make refresh arguments="-api-key=API_KEY -base-id=BASE_ID"
