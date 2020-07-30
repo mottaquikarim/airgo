@@ -123,8 +123,8 @@ Please make sure to update tests as appropriate.
 
 ## Contributors
 There are two contributors to this project.
-Rumman
-Taqqui
+[rummankarim]  (https://github.com/rummankarim)
+[mottaquikarim]  (https://github.com/mottaquikarim)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
