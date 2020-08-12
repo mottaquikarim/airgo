@@ -46,6 +46,7 @@ func main() {
 	// TODO: we extract the `config.json` from
 	// the /templates folder and use it to
 	// fetch data from airtable
+	// etc
 
 	// for now, just read the hardocded "Home" table
 	var homeContent []airtable.Record

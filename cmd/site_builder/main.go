@@ -26,27 +26,27 @@ func main() {
 	}
 
 	// write file through template
-	// more info here: 
+	// more info here:
 	// https://www.htmlgoodies.com/beyond/reference/nesting-templates-with-go-web-programming.html
 	t, err := template.ParseFiles("templates/layout.html.tmpl", "templates/index.html.tmpl")
 	if err != nil {
-	    log.Print(err)
-	    return
+		log.Print(err)
+		return
 	}
 
 	// create or truncate index.html
 	f, err := os.Create("static/index.html")
 	defer f.Close()
 	if err != nil {
-	    log.Println("create file: ", err)
-	    return
+		log.Println("create file: ", err)
+		return
 	}
 
 	// populate template with data
 	err = t.ExecuteTemplate(f, "layout", home)
 	if err != nil {
-	    log.Print("execute: ", err)
-	    return
+		log.Print("execute: ", err)
+		return
 	}
 
 	log.Printf("File contents: %v", home)
