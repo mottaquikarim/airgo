@@ -3,5 +3,45 @@
 		"name": "Home",
 		"key": "Home",
 		"filenameRoot": "index"
+	}, {
+		"name": "About",
+		"key": "About",
+		"filenameRoot": "about"
+	}, {
+		"name": "Services",
+		"key": "Services",
+		"filenameRoot": "services"
+	}, {
+		"name": "Gallery",
+		"key": "Gallery",
+		"filenameRoot": "gallery"
+	}, {
+		"name": "Flowers",
+		"key": "Flowers",
+		"filenameRoot": "flowers"
+	}, {
+		"name": "Photography",
+		"key": "Photography",
+		"filenameRoot": "photography"
+	}, {
+		"name": "Limousine",
+		"key": "Limousine",
+		"filenameRoot": "limousine"
+	}, {
+		"name": "Accessories",
+		"key": "Accessories",
+		"filenameRoot": "accessories"
+	}, {
+		"name": "Reviews",
+		"key": "Reviews",
+		"filenameRoot": "reviews"
+	}, {
+		"name": "Blog",
+		"key": "Blog",
+		"filenameRoot": "blog"
+	}, {
+		"name": "Contact Us",
+		"key": "Contact Us",
+		"filenameRoot": "contact us"
 	}],
 }

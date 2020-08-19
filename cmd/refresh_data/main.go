@@ -48,25 +48,36 @@ func main() {
 	// fetch data from airtable
 
 	// for now, just read the hardocded "Home" table
-	var homeContent []airtable.Record
+	var nameContent []airtable.Record
 	var err error
 	var opts = airtable.Options{
 		MaxRecords: 100,
 		View:       "Content",
 	}
-	mainSite := airtable.NewTable("Home", account)
-	if homeContent, err = mainSite.List(opts); err != nil {
+	mainSite := airtable.NewTable("Name", account)
+	for account := 1; account < 11; account++ {
+		fmt.Printf("%d Name", account)
+
+	}
+	if nameContent, err = mainSite.List(opts); err != nil {
 		log.Printf("Error! %v", err)
 	}
-
 	// write to file now
-	message, err := json.Marshal(homeContent)
+	message, err := json.Marshal(nameContent)
 	err = ioutil.WriteFile("data/index.json", message, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
-	log.Printf("data: %v", homeContent)
+
+	log.Printf("data: %v", nameContent)
 
 	log.Printf("Successfully completed")
 	os.Exit(0) // redundant?
-}
+
+	
+	
+
+ }
+
+
+
