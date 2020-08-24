@@ -1,14 +1,13 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 
-	airtable "github.com/mottaquikarim/go-airtable"
 	flag "github.com/namsral/flag"
 	log "github.com/sirupsen/logrus"
+
+	airgo "github.com/mottaquikarim/airgo/airgo"
 )
 
 // these are the key variables that store the input
@@ -35,38 +34,14 @@ func main() {
 	fs.Usage = usage
 	fs.Parse(os.Args[1:])
 
-	// we create an account struct
-	// that is passed in to airtable
-	// module
-	account := airtable.Account{
+	if err := airgo.RefreshData(airgo.RefreshOpts{
 		ApiKey: *apiKey,
 		BaseId: *baseId,
-	}
-
-	// TODO: we extract the `config.json` from
-	// the /templates folder and use it to
-	// fetch data from airtable
-
-	// for now, just read the hardocded "Home" table
-	var homeContent []airtable.Record
-	var err error
-	var opts = airtable.Options{
-		MaxRecords: 100,
-		View:       "Content",
-	}
-	mainSite := airtable.NewTable("Home", account)
-	if homeContent, err = mainSite.List(opts); err != nil {
-		log.Printf("Error! %v", err)
-	}
-
-	// write to file now
-	message, err := json.Marshal(homeContent)
-	err = ioutil.WriteFile("data/index.json", message, 0644)
-	if err != nil {
+		Conf:   "config.json",
+		Dest:   "data",
+	}); err != nil {
 		log.Fatal(err)
 	}
-	log.Printf("data: %v", homeContent)
 
-	log.Printf("Successfully completed")
 	os.Exit(0) // redundant?
 }

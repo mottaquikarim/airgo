@@ -2,6 +2,7 @@
 	"nav": [{
 		"name": "Home",
 		"key": "Home",
-		"filenameRoot": "index"
-	}],
+		"filenameRoot": "index",
+        "viewname": "Content"
+	}]
 }
